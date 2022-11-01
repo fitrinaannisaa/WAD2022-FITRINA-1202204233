@@ -69,7 +69,7 @@ $cars = [
                             <input type="text" class="form-control" id="Nama" placeholder="">
                             <div class="form-group">
                                 <label for="date">Book Date</label>
-                                <input type="time" class="form-control" id="date" placeholder="">
+                                <input type="date" class="form-control" id="date" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="time">Start Time</label>

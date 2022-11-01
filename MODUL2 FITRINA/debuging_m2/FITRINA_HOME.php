@@ -53,12 +53,12 @@
                         <div>1200 CC</div>
                         <div>Manual </div>
                         <div class="card-footer">
-                            <a href="FITRINABOOKING.php" class="btn btn-primary">Book Now</a>
+                            <a href="FITRINA_BOOKING.php" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
-                    <div class="card_ py-3">
+                    <div class="card py-3">
                         <img src="https://imgd.aeplcdn.com/664x374/n/nd7mjta_1496295.jpg?q=75" class="img-fluid">
                         <h4>Toyoya Inova</h4>
                         <h6>Rp. 500000 / Day</h6>
