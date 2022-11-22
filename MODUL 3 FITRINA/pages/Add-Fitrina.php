@@ -1,6 +1,4 @@
-}
 
-?>
 
 <!doctype html>
 <html lang="en">
@@ -45,14 +43,14 @@
          </div>
             <div class="row">
             <div class="col-md-10">
-                <form action="" method="POST">
+                <form action="../config/insert.php" method="POST">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama Mobil</label>
                         <input type="text" class="form-control" id="nama" name="nama">
                     </div>
                     <div class="mb-3">
-                        <label for="pemiliki" class="form-label">Nama Pemilik</label>
-                        <input type="text" class="form-control" id="pemiliki" name="pemiliki">
+                        <label for="pemilik" class="form-label">Nama Pemilik</label>
+                        <input type="text" class="form-control" id="pemilik" name="pemilik">
                     </div>
                     <div class="mb-3">
                         <label for="merk" class="form-label">Merk</label>
@@ -66,7 +64,7 @@
                         <label for="deskripsi" class="form-label">Deskripsi</label>
                         <input type="text" class="form-control" id="deskripsi" name="deskripsi">
                     </div>
-                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                    <input type="submit" class="btn btn-primary" name="submit"></input>
                 </form>
         </div>
         </div>
