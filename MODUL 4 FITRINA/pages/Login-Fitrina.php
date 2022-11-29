@@ -1,20 +1,21 @@
 <?php
+
+$database = mysqli_connect("127.0.0.1:4306", "root", "", "wad_modul4_fitrina");
 session_start();
-$database = mysqli_connect("localhost", "root", "", "wad_modul4_fitrina", 4306);;
 if(isset($_POST["submit"])){
 	$email = $_POST['email'];
 	$password = $_POST['pass'];
 
-	$query = mysqli_query($database, "select * from user_fitrina where email = '$email'");
+	$query = mysqli_query($database, "SELECT * FROM user_fitrina WHERE email = '$email'");
+	$result = mysqli_fetch_assoc($query);
+	if(mysqli_num_rows($query) > 1){
 	
-	if(mysqli_num_rows($query) == 1){
-		$result = mysqli_fetch_assoc($query);
 		
 		if($password == $result["password"]){
 			$_SESSION['login'] = true;
 			$_SESSION['id'] = $result["id"];
 			header("Location: Home-Fitrina.php");
-			exit;
+			
 		}
 
 		

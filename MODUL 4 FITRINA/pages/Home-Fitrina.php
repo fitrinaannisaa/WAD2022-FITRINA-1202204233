@@ -1,9 +1,14 @@
 <?php
-session_start();
 require "../Config/connector.php";
+$database = mysqli_connect("localhost", "root", "", "wad_modul4_fitrina", 4306);;
+session_start();
+
 if(isset($_SESSION['login'])){
   $idprofile = $_SESSION["id"];
   $dataUser = profile($_SESSION['id'])[0];
+
+  $query = mysqli_query($database, "select * from user_fitrina where id = '$idprofile'");
+  $data = mysqli_fetch_assoc($query);
 }
 ?>
 
@@ -34,25 +39,25 @@ if(isset($_SESSION['login'])){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="Home-Qorina.php">Home</a>
+              <a class="nav-link active" href="Home-Fitrina.php">Home</a>
             </li>
             <?php if (isset($_SESSION['login'])) : ?>
               <li class="nav-item">
-                <a class="nav-link" href="ListCar-Qorina.php">MyCar</a>
+                <a class="nav-link" href="ListCar-Fitrina.php">MyCar</a>
               </li>
             <?php endif; ?>
           </ul>
         </div>
 
         <?php if (!isset($_SESSION['login'])) : ?>
-          <a href="login-Qorina.php" class="text-white text-decoration-none">Login</a>
+          <a href="Login-Fitrina.php" class="text-white text-decoration-none">Login</a>
 
         <?php else : ?>
           <div class="d-flex gap-4">
-            <a href="Add-Qorina.php" class="btn btn-light">add car</a>
+            <a href="Add-Fitrina.php" class="btn btn-light">add car</a>
             <div class="dropdown">
               <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <?=$dataUser['nama']?>
+                <?php echo $data['nama']?>
               </a>
 
               <ul class="dropdown-menu">
